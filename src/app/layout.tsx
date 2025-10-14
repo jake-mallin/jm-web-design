@@ -4,12 +4,11 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'JM Web Design | Modern Websites that Convert',
   description:
-    'Portfolio of JM Web Design. I build fast, accessible, conversion-focused websites using React, TypeScript, and Tailwind.',
-  metadataBase: new URL('https://www.example.com'), // ← update to your domain
+    'Portfolio of JM Web Design. I build fast, accessible, conversion-focused websites that both look and feel great.',
+  metadataBase: new URL('https://www.example.com'),
   openGraph: {
     title: 'JM Web Design',
-    description:
-      'Fast, accessible, conversion-focused websites using React, TypeScript, and Tailwind.',
+    description: 'Fast, accessible, conversion-focused websites that both look and feel great.',
     url: 'https://www.example.com',
     siteName: 'JM Web Design',
     images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'JM Web Design' }],
@@ -19,8 +18,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'JM Web Design',
-    description:
-      'Fast, accessible, conversion-focused websites using React, TypeScript, and Tailwind.',
+    description: 'Fast, accessible, conversion-focused websites that both look and feel great.',
     images: ['/og.jpg'],
   },
 }
