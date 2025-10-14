@@ -1,16 +1,24 @@
-export default function Footer() {
+import classNames from 'classnames'
+
+type FooterProps = {
+  hasBackground?: boolean
+}
+
+export default function Footer({ hasBackground = false }: FooterProps) {
   return (
-    <footer className="border-t border-slate-100">
-      <div className="container-px mx-auto flex h-20 items-center justify-between text-sm text-slate-500">
-        <p>© {new Date().getFullYear()} JM Web Design</p>
+    <footer
+      className={classNames(
+        'w-full rounded-lg', // always applied
+        hasBackground ? 'bg-jm-primary' : 'bg-transparent'
+      )}
+    >
+      <div className="text-neutral-0 flex h-20 items-center justify-between px-4 text-sm">
         <nav className="flex gap-4">
-          <a href="#" className="hover:text-slate-900">
+          <a href="mailto:jake.mallin@gmail.com" className="hover:text-slate-900">
             Privacy
           </a>
-          <a href="#" className="hover:text-slate-900">
-            Terms
-          </a>
         </nav>
+        <p>© {new Date().getFullYear()} JM Web Design</p>
       </div>
     </footer>
   )
