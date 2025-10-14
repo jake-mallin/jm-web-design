@@ -2,8 +2,6 @@
 
 import { useEffect, useId, useState } from 'react'
 
-import classNames from 'classnames'
-
 import Logo from './Logo'
 
 export default function Header() {
@@ -20,11 +18,11 @@ export default function Header() {
   }, [open])
 
   return (
-    <header className="border-neutral-0/24 bg-neutral-0/6 absolute top-8 z-50 mx-16 w-[calc(100%-128px)] rounded-full border p-0.5 backdrop-blur-xs md:top-12 md:left-1/2 md:w-auto md:-translate-x-1/2 md:pl-20">
+    <header className="border-neutral-0/24 bg-neutral-0/6 absolute top-8 z-50 mx-16 w-[calc(100%-128px)] rounded-full border py-0.5 backdrop-blur-xs md:top-12 md:left-1/2 md:w-auto md:-translate-x-1/2 md:p-0.5 md:pl-20">
       <div className="flex items-center">
         <a
           href="#"
-          className="absolute top-1/2 left-2 -translate-y-1/2 text-xl font-semibold tracking-tight"
+          className="absolute top-1/2 left-4 -translate-y-1/2 text-xl font-semibold tracking-tight md:left-2"
         >
           <Logo color="white" shadow className="h-16 w-auto" />
         </a>
@@ -82,7 +80,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="border-neutral-0/20 bg-neutral-0/10 text-neutral-0 hover:bg-neutral-0/20 mr-2 ml-auto inline-flex h-11 w-11 items-center justify-center rounded-full border backdrop-blur transition md:hidden"
+          className="ml-auto inline-flex items-center justify-center rounded-full px-4 py-2 opacity-80 transition-all hover:opacity-100 md:hidden"
           aria-controls={menuId}
           aria-expanded={open}
           aria-label={open ? 'Close menu' : 'Open menu'}
@@ -90,62 +88,54 @@ export default function Header() {
         >
           <span className="sr-only">Menu</span>
           <svg
-            className={classNames('h-5 w-5', { hidden: open })}
-            viewBox="0 0 24 24"
+            className="drop-shadow-logo h-5 w-4"
+            viewBox="0 0 16 15"
             fill="none"
+            xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
           >
-            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="1.5" />
-          </svg>
-          <svg
-            className={classNames('h-5 w-5', { hidden: !open })}
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" strokeWidth="1.5" />
+            <path
+              d="M0.5625 2.89062C0.246094 2.89062 0 2.64453 0 2.32812V0.921875C0 0.640625 0.246094 0.359375 0.5625 0.359375H15.1875C15.4688 0.359375 15.75 0.640625 15.75 0.921875V2.32812C15.75 2.64453 15.4688 2.89062 15.1875 2.89062H0.5625ZM0.5625 8.51562C0.246094 8.51562 0 8.26953 0 7.95312V6.54688C0 6.26562 0.246094 5.98438 0.5625 5.98438H15.1875C15.4688 5.98438 15.75 6.26562 15.75 6.54688V7.95312C15.75 8.26953 15.4688 8.51562 15.1875 8.51562H0.5625ZM0.5625 14.1406C0.246094 14.1406 0 13.8945 0 13.5781V12.1719C0 11.8906 0.246094 11.6094 0.5625 11.6094H15.1875C15.4688 11.6094 15.75 11.8906 15.75 12.1719V13.5781C15.75 13.8945 15.4688 14.1406 15.1875 14.1406H0.5625Z"
+              fill="white"
+              fillOpacity="0.8"
+            />
           </svg>
         </button>
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-40 md:hidden">
-          <button
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            aria-label="Close menu overlay"
-            onClick={() => setOpen(false)}
-          />
+        <div className="fixed inset-0 top-12 z-40 md:hidden">
           <div
             id={menuId}
-            className="border-neutral-0/20 bg-neutral-0/90 absolute top-24 left-1/2 w-[92vw] -translate-x-1/2 rounded-2xl border p-4 shadow-2xl backdrop-blur-xl"
+            className="border-neutral-0/20 bg-neutral-0/90 absolute left-1/2 w-full -translate-x-1/2 rounded-2xl border p-4 shadow-2xl backdrop-blur-xl"
             role="dialog"
             aria-modal="true"
           >
             <nav className="flex flex-col gap-2 text-base">
               <a
                 href="#services"
-                className="text-neutral-0 hover:bg-neutral-0/10 rounded-xl px-4 py-3 transition"
+                className="hover:text-neutral-1000 text-neutral-500 transition-all"
                 onClick={() => setOpen(false)}
               >
                 Clients
               </a>
               <a
                 href="#work"
-                className="text-neutral-0 hover:bg-neutral-0/10 rounded-xl px-4 py-3 transition"
+                className="hover:text-neutral-1000 text-neutral-500 transition-all"
                 onClick={() => setOpen(false)}
               >
                 About me
               </a>
               <a
                 href="#contact"
-                className="text-neutral-0 hover:bg-neutral-0/10 rounded-xl px-4 py-3 transition"
+                className="hover:text-neutral-1000 text-neutral-500 transition-all"
                 onClick={() => setOpen(false)}
               >
                 Resume
               </a>
               <a
                 href="#contact"
-                className="btn-accent mt-2 rounded-full px-4 py-3 inset-shadow-[-1px_-2px_0px_#E4114D,0.5px_1px_0px_#F4678F] hover:inset-shadow-[-1px_-2px_0px_#F4678F,0.5px_1px_0px_#E4114D]"
+                className="text-jm-accent hover:text-jm-accent-700 transition-all"
                 onClick={() => setOpen(false)}
               >
                 Get in touch
