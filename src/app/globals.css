@@ -27,6 +27,9 @@
   --color-paragraph: var(--color-neutral-500);
   --color-placeholder: var(--color-neutral-400);
   --color-inverse: var(--color-neutral-0);
+
+  --drop-shadow-logo: 0 4px 3px rgba(0, 0, 0, 0.4);
+  --text-shadow-nav-item: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 html {
@@ -48,8 +51,7 @@ h6 {
 
 /* Custom utilities using @utility (v4) */
 @utility container-px {
-  padding-left: clamp(1rem, 2vw, 2rem);
-  padding-right: clamp(1rem, 2vw, 2rem);
+  @apply mx-auto max-w-[1600px];
 }
 
 @utility card {
@@ -75,6 +77,10 @@ h6 {
 
 @utility btn-primary {
   @apply btn bg-jm-primary hover:bg-jm-primary-700 text-white;
+}
+
+@utility btn-accent {
+  @apply btn bg-jm-accent hover:bg-jm-accent-700 text-white;
 }
 
 @utility btn-outline {

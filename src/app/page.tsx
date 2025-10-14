@@ -16,8 +16,8 @@ export default function Page() {
         orgLogoUrl={`${siteUrl}/og.jpg`}
         breadcrumbs={[{ name: 'Home', item: siteUrl }]}
       />
-      <Header />
-      <main>
+      <main className="relative p-4 md:p-6">
+        <Header />
         <Hero />
         <Services />
         <WorkGrid />
