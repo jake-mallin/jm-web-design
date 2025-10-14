@@ -1,19 +1,32 @@
 @import 'tailwindcss';
 
-/* Optional: JM brand tokens using @theme (v4) */
 @theme {
-  /* Update to your palette or remove if sticking to default colors */
-  --color-jm-50: oklch(0.98 0.01 250);
-  --color-jm-100: oklch(0.96 0.02 250);
-  --color-jm-200: oklch(0.91 0.04 250);
-  --color-jm-300: oklch(0.84 0.06 250);
-  --color-jm-400: oklch(0.75 0.09 250);
-  --color-jm-500: oklch(0.67 0.11 250);
-  /* primary */
-  --color-jm-600: oklch(0.6 0.12 250);
-  --color-jm-700: oklch(0.52 0.12 250);
-  --color-jm-800: oklch(0.45 0.11 250);
-  --color-jm-900: oklch(0.38 0.1 250);
+  --color-jm-primary: #041f1e;
+  --color-jm-primary-700: #021413;
+  --color-jm-accent: #f0386b;
+  --color-jm-accent-700: #e4114d;
+  --color-jm-neutral: #dddbf1;
+  --color-jm-neutral-700: #b7b3dc;
+
+  --color-neutral-0: #ffffff;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e2e2e2;
+  --color-neutral-300: #d5d5d5;
+  --color-neutral-400: #a5a5a5;
+  --color-neutral-500: #676767;
+  --color-neutral-600: #565656;
+  --color-neutral-700: #424242;
+  --color-neutral-800: #333333;
+  --color-neutral-900: #212121;
+  --color-neutral-1000: #000000;
+
+  /* Typography */
+  --color-primary: var(--color-jm-primary);
+  --color-secondary: var(--color-jm-primary-700);
+  --color-heading: var(--color-jm-primary);
+  --color-paragraph: var(--color-neutral-500);
+  --color-placeholder: var(--color-neutral-400);
+  --color-inverse: var(--color-neutral-0);
 }
 
 html {
@@ -21,8 +34,16 @@ html {
 }
 
 body {
-  color: rgb(15 23 42);
-  background: white;
+  @apply text-paragraph bg-neutral-200;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-heading leading-normal font-bold;
 }
 
 /* Custom utilities using @utility (v4) */
@@ -53,7 +74,7 @@ body {
 }
 
 @utility btn-primary {
-  @apply btn bg-jm-600 hover:bg-jm-700 text-white;
+  @apply btn bg-jm-primary hover:bg-jm-primary-700 text-white;
 }
 
 @utility btn-outline {
