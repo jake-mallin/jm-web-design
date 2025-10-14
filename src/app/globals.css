@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
+  --font-sans: var(--font-lexend-deca), ui-sans-serif, system-ui;
+
   --color-jm-primary: #041f1e;
   --color-jm-primary-700: #021413;
   --color-jm-accent: #f0386b;
@@ -33,7 +35,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  @apply scroll-smooth font-sans;
 }
 
 body {

@@ -1,5 +1,15 @@
+import { Lexend_Deca } from 'next/font/google'
+
 import type { Metadata } from 'next'
+
 import './globals.css'
+
+const lexendDeca = Lexend_Deca({
+  subsets: ['latin'],
+  weight: ['300', '400', '600', '700'], // choose weights you need
+  variable: '--font-lexend-deca',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'JM Web Design | Modern Websites that Convert',
@@ -25,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="antialiased">
+    <html lang="en" className={`${lexendDeca.variable} antialiased`}>
       <body>{children}</body>
     </html>
   )

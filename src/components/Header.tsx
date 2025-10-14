@@ -20,7 +20,7 @@ export default function Header() {
   }, [open])
 
   return (
-    <header className="border-neutral-0/24 bg-neutral-0/6 absolute top-8 z-50 mx-16 w-[calc(100%-128px)] rounded-full border p-0.5 backdrop-blur md:top-12 md:left-1/2 md:w-auto md:-translate-x-1/2 md:pl-20">
+    <header className="border-neutral-0/24 bg-neutral-0/6 absolute top-8 z-50 mx-16 w-[calc(100%-128px)] rounded-full border p-0.5 backdrop-blur-xs md:top-12 md:left-1/2 md:w-auto md:-translate-x-1/2 md:pl-20">
       <div className="flex items-center">
         <a
           href="#"
@@ -29,30 +29,31 @@ export default function Header() {
           <Logo color="white" shadow className="h-16 w-auto" />
         </a>
 
-        <nav className="hidden gap-6 text-sm font-medium md:flex md:items-center">
+        <nav className="hidden gap-6 text-base leading-5 font-light md:flex md:items-center">
           <a
             href="#services"
-            className="text-neutral-0 hover:border-neutral-0/12 border-neutral-0/0 text-shadow-nav-item flex items-center gap-1.5 rounded-full border px-4 py-2 font-light text-nowrap transition-all"
+            className="text-neutral-0 hover:border-neutral-0/12 border-neutral-0/0 text-shadow-nav-item flex items-center gap-1.5 rounded-full border px-4 py-2 text-nowrap transition-all"
           >
             Clients
           </a>
           <a
             href="#work"
-            className="text-neutral-0 hover:border-neutral-0/12 border-neutral-0/0 text-shadow-nav-item flex items-center gap-1.5 rounded-full border px-4 py-2 font-light text-nowrap transition-all"
+            className="text-neutral-0 hover:border-neutral-0/12 border-neutral-0/0 text-shadow-nav-item flex items-center gap-1.5 rounded-full border px-4 py-2 text-nowrap transition-all"
           >
             About me
           </a>
           <a
             href="#contact"
-            className="text-neutral-0 hover:border-neutral-0/12 border-neutral-0/0 text-shadow-nav-item flex items-center gap-1.5 rounded-full border px-4 py-2 font-light text-nowrap transition-all"
+            className="text-neutral-0 hover:border-neutral-0/12 border-neutral-0/0 text-shadow-nav-item flex items-center gap-1.5 rounded-full border px-4 py-2 text-nowrap transition-all"
           >
             Resume
-            <i className="ml-1 inline-block">
+            <i className="inline-block">
               <svg
                 width="8"
                 height="10"
                 viewBox="0 0 8 10"
                 fill="none"
+                className="drop-shadow-logo"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
               >
@@ -73,7 +74,7 @@ export default function Header() {
           </a>
           <a
             href="#contact"
-            className="btn-accent rounded-full text-nowrap inset-shadow-[-1px_-2px_0px_#E4114D,0.5px_1px_0px_#F4678F] hover:inset-shadow-[-1px_-2px_0px_#F4678F,0.5px_1px_0px_#E4114D]"
+            className="btn-accent rounded-full font-bold text-nowrap inset-shadow-[-1px_-2px_0px_#E4114D,0.5px_1px_0px_#F4678F] hover:inset-shadow-[-1px_-2px_0px_#F4678F,0.5px_1px_0px_#E4114D]"
           >
             Get in touch
           </a>
