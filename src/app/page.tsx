@@ -1,6 +1,4 @@
 import Contact from '@/components/Contact'
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import SeoJsonLd from '@/components/SeoJsonLd'
 import Services from '@/components/Services'
@@ -16,14 +14,12 @@ export default function Page() {
         orgLogoUrl={`${siteUrl}/og.jpg`}
         breadcrumbs={[{ name: 'Home', item: siteUrl }]}
       />
-      <main className="relative p-4 md:p-6">
-        <Header />
+      <main className="relative">
         <Hero />
         <Services />
         <WorkGrid />
         <Contact />
       </main>
-      <Footer />
     </>
   )
 }

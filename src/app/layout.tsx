@@ -6,7 +6,7 @@ import './globals.css'
 
 const lexendDeca = Lexend_Deca({
   subsets: ['latin'],
-  weight: ['300', '400', '600', '700'], // choose weights you need
+  weight: ['300', '400', '500', '600', '700'], // choose weights you need
   variable: '--font-lexend-deca',
   display: 'swap',
 })

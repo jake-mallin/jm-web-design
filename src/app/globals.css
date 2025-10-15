@@ -3,6 +3,7 @@
 @theme {
   --font-sans: var(--font-lexend-deca), ui-sans-serif, system-ui;
 
+  --color-jm-primary-300: #1e2d2f;
   --color-jm-primary: #041f1e;
   --color-jm-primary-700: #021413;
   --color-jm-accent: #f0386b;
@@ -32,6 +33,8 @@
 
   --drop-shadow-logo: 0 4px 3px rgba(0, 0, 0, 0.4);
   --text-shadow-nav-item: 0 1px 2px rgba(0, 0, 0, 0.4);
+
+  --breakpoint-xs: 420px;
 }
 
 html {
@@ -40,15 +43,6 @@ html {
 
 body {
   @apply text-paragraph bg-neutral-200;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply text-heading leading-normal font-bold;
 }
 
 /* Custom utilities using @utility (v4) */
@@ -63,28 +57,29 @@ h6 {
   border: 1px solid rgb(241 245 249);
 }
 
-@utility section {
-  padding-block: clamp(4rem, 6vw, 6rem);
-}
-
 @utility btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 0.75rem;
-  padding: 0.75rem 1.25rem;
-  font-weight: 500;
-  transition: all 0.2s;
+  @apply inline-block rounded-full px-4 py-2 text-center text-base transition duration-300 ease-in-out;
 }
 
 @utility btn-primary {
-  @apply btn bg-jm-primary hover:bg-jm-primary-700 text-white;
+  @apply btn bg-jm-primary hover:bg-jm-primary-700 font-medium text-white;
 }
 
 @utility btn-accent {
-  @apply btn bg-jm-accent hover:bg-jm-accent-700 text-white;
+  @apply btn bg-jm-accent hover:bg-jm-accent-700 font-medium text-white;
 }
 
 @utility btn-outline {
-  @apply btn border border-slate-300 text-slate-900 hover:bg-slate-50;
+  @apply btn hover:text-neutral-1000 border-neutral-0 hover:bg-neutral-0 text-neutral-0 border font-medium;
+}
+
+@utility hero-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(240, 56, 107, 0) 0%,
+    rgba(240, 56, 107, 0.65) 8%,
+    rgba(240, 56, 107, 1) 16%,
+    rgba(240, 56, 107, 1) 92%,
+    rgba(240, 56, 107, 0) 100%
+  );
 }
