@@ -1,8 +1,5 @@
-import Contact from '@/components/Contact'
 import Hero from '@/components/Hero'
 import SeoJsonLd from '@/components/SeoJsonLd'
-import Services from '@/components/Services'
-import WorkGrid from '@/components/WorkGrid'
 
 export default function Page() {
   const siteUrl = 'https://www.example.com'
@@ -16,9 +13,6 @@ export default function Page() {
       />
       <main className="relative">
         <Hero />
-        <Services />
-        <WorkGrid />
-        <Contact />
       </main>
     </>
   )

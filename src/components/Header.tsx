@@ -24,7 +24,7 @@ export default function Header() {
           href="#"
           className="absolute top-1/2 left-4 -translate-y-1/2 text-xl font-semibold tracking-tight md:left-2"
         >
-          <Logo color="white" shadow className="h-16 w-auto" />
+          <Logo color="white" shadow className="h-16 w-auto" animateDraw duration={1.4} />
         </a>
 
         <nav className="hidden gap-6 text-base leading-5 font-light md:flex md:items-center">
