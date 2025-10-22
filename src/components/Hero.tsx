@@ -38,7 +38,14 @@ export default function Hero() {
             </span>
             <br />
             as{' '}
-            <span className="before:hero-gradient relative before:absolute before:top-1/2 before:left-1/2 before:mt-1.5 before:h-7/10 before:w-6/5 before:-translate-x-1/2 before:-translate-y-1/2 before:rotate-2">
+            <span className="relative">
+              <motion.span
+                initial={{ width: '0%' }}
+                animate={{ width: '110%' }}
+                transition={{ duration: 0.4, delay: 2, ease: 'easeOut' }}
+                className="hero-gradient absolute top-3.5 -left-3 mt-1.25 ml-2 h-[65%] -rotate-2"
+                aria-hidden
+              />
               <span className="relative">good</span>
             </span>{' '}
             as they look
